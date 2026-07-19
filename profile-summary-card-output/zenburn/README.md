@@ -32,23 +32,3 @@
 ```
 
     
-
----
-
-![](./2-most-commit-language.svg)
-
-```
-![](https://raw.githubusercontent.com/Suyama-Daichi/Suyama-Daichi/master/profile-summary-card-output/zenburn/2-most-commit-language.svg)
-```
-
-    
-
----
-
-![](./4-productive-time.svg)
-
-```
-![](https://raw.githubusercontent.com/Suyama-Daichi/Suyama-Daichi/master/profile-summary-card-output/zenburn/4-productive-time.svg)
-```
-
-    

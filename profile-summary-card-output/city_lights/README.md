@@ -32,13 +32,3 @@
 ```
 
     
-
----
-
-![](./2-most-commit-language.svg)
-
-```
-![](https://raw.githubusercontent.com/Suyama-Daichi/Suyama-Daichi/master/profile-summary-card-output/city_lights/2-most-commit-language.svg)
-```
-
-    

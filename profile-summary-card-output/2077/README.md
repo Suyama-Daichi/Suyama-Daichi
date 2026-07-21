@@ -32,13 +32,3 @@
 ```
 
     
-
----
-
-![](./2-most-commit-language.svg)
-
-```
-![](https://raw.githubusercontent.com/Suyama-Daichi/Suyama-Daichi/master/profile-summary-card-output/2077/2-most-commit-language.svg)
-```
-
-    

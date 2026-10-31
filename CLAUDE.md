@@ -10,13 +10,14 @@ d0nchan（どんちゃん）の個人ポートフォリオサイト。ビルド�
 - `404.html` / `favicon.svg` / `apple-touch-icon.png`
 - `.nojekyll` — Jekyll の処理を止めるための空ファイル。消さない
 
-CSS はすべて各 HTML のインライン style と `<head>` 内の `<style>` に書かれている。フォントは Google Fonts（Inter / Noto Sans JP / JetBrains Mono）。JavaScript は使っていない。
+CSS はすべて各 HTML のインライン style と `<head>` 内の `<style>` に書かれている。フォントは Google Fonts（Inter / Noto Sans JP / JetBrains Mono）。JavaScript はテーマ切り替え用のインラインスクリプトだけ。
 
 ## 守ること
 
 - **本名を出さない。** 表記は「d0nchan」「d0nchan（どんちゃん）」だけ。メールアドレスも載せない。GitHub のリンク（github.com/Suyama-Daichi）だけは本人の判断で残している
 - 文言は推敲済み。勝手に書き換えない。直す必要があると思ったら、変更案を出して確認を取る
-- デザインはミニマル・モノクロ（#111111 / #3A3A3A / #6B6B6B / #E5E5E5 / #FFFFFF）。色やフォントを増やさない
+- デザインはミニマル・モノクロ。色やフォントを増やさない
+- 色はすべて CSS 変数（`--bg` `--fg` `--fg2` `--muted` `--muted-inv` `--line` `--sub` `--hover`）で指定し、`:root` と `@media (prefers-color-scheme: dark)` で値を切り替えている（OS の設定に合わせてダークモードになる）。ヘッダー右の `.theme-toggle` ボタンで手動でも切り替えられ、`<html data-theme="light|dark">` と localStorage（キー `theme`）で選択を保持する。`<head>` 内の小さなスクリプトは、表示前にテーマを当ててちらつきを防ぐためのものなので消さない。新しく色を書くときも16進数を直書きせず、この変数を使う
 - リンクはすべて相対パスにする。`https://suyama-daichi.github.io/<リポジトリ名>/` 配下で動くように、`/` から始まる絶対パスは使わない
 - スマホ幅（390px）で横スクロールが出ないこと
 

@@ -6,8 +6,8 @@ d0nchan（どんちゃん）の個人ポートフォリオサイト。ビルド�
 
 - `index.html` — トップ（About / Work / Homelab / Writing / Contact）
 - `metrandom.html` / `swarmlytics.html` / `kakitome.html` / `homelab.html` — 実績の詳細ページ
-- `assets/` — 画像（アイコン・スクリーンショット・OGP 画像）
-- `404.html` / `favicon.svg` / `apple-touch-icon.png`
+- `assets/` — 画像（アイコン・スクリーンショット・OGP 画像・About の写真 `avatar.webp`）
+- `404.html` / `favicon.ico` / `favicon-32.png` / `apple-touch-icon.png`
 - `.nojekyll` — Jekyll の処理を止めるための空ファイル。消さない
 
 CSS はすべて各 HTML のインライン style と `<head>` 内の `<style>` に書かれている。フォントは Google Fonts（Inter / Noto Sans JP / JetBrains Mono）。JavaScript はテーマ切り替え用のインラインスクリプトだけ。
@@ -33,8 +33,8 @@ CSS はすべて各 HTML のインライン style と `<head>` 内の `<style>` 
 
 ## 残っている作業（TODO）
 
-1. ~~**OGP / Twitter カード**~~（済: 公開 URL は https://suyama-daichi.github.io/Suyama-Daichi/）:各ページに `og:title` `og:description` `og:image` `og:url` `twitter:card` を足す。`og:image` と `og:url` は絶対 URL が必要なので、公開 URL が決まってから入れる。OGP 画像（1200×630）はモノクロのデザインに合わせて作る
-2. ~~**favicon**~~（済: `favicon.svg` / `apple-touch-icon.png`）: `d0nchan` の頭文字などで、モノクロの favicon（SVG と 180px の apple-touch-icon）を作って各ページに設定する
+1. ~~**OGP**~~（済）: OGP（`og:*` / `twitter:*`）と favicon は設定済み。`og:url` と `og:image` は公開 URL `https://suyama-daichi.github.io/Suyama-Daichi/` の絶対 URL。公開 URL を変えるときは、5ページすべてを置き換える。OGP 画像は `assets/ogp.png`（1200×630、モノクロ）、favicon は `favicon.ico` `favicon-32.png` `apple-touch-icon.png`（About のアイコン写真を白黒にしたもの）
+2. **公開後の確認**: X の投稿画面などに URL を貼り、カードに `assets/ogp.png` が出ることを確かめる
 3. ~~**404.html**~~（済）: トップへ戻るリンクだけのシンプルな 404 ページを作る
 4. ~~**画像の最適化**~~（済）: `assets/` の PNG（swarmlytics-map / trip / search）は 200KB 超。WebP に変換して参照を差し替える。`<img>` に `width` / `height` と、ファーストビュー外の画像には `loading="lazy"` を付ける
 5. **インライン style の整理（任意）**: 同じ style が繰り返されている。見た目を変えずに共通の CSS ファイルへまとめる。やる場合は、変更前と変更後のスクリーンショットを 1440px と 390px で比べて差がないことを確かめる

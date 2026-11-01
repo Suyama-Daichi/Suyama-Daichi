@@ -29,6 +29,8 @@
 :root[data-theme="dark"]{--bg:#0E0E0E;--fg:#EDEDED;--fg2:#C2C2C2;--muted:#8F8F8F;--muted-inv:#555555;--line:#2A2A2A;--sub:#1C1C1C;--hover:#B5B5B5}
 .site-nav{order:2;margin-left:auto}.theme-toggle{order:3;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;padding:0;background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:50%;cursor:pointer}.theme-toggle:hover{border-color:var(--fg)}
 @media (max-width: 720px){.theme-toggle{order:1;margin-left:auto}.site-nav{flex-basis:100%}}
+@media (max-width: 720px){.site-header{position:sticky;top:0;z-index:10;background:var(--bg);box-shadow:0 0 0 100vmax var(--bg);clip-path:inset(0 -100vmax);transition:transform .25s ease}.site-header.is-hidden:not(:focus-within){transform:translateY(-100%)}}
+@media (prefers-reduced-motion: reduce){.site-header{transition:none}}
 body{margin:0;background:var(--bg)}
 a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 </style>
@@ -37,7 +39,7 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 <div id="top" style="font-family: Inter, 'Noto Sans JP', sans-serif; color: var(--fg); background: var(--bg); min-height: 100vh">
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px)">
 
-<header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 0; border-bottom: 1px solid var(--line)">
+<header class="site-header" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 0; border-bottom: 1px solid var(--line)">
 <a href="index.html" style="font-weight: 600; font-size: 17px; letter-spacing: -0.01em">d0nchan</a>
 <nav aria-label="メイン" class="site-nav" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 14px">
 <a href="index.html#about" style="padding: 12px 0">About</a>
@@ -193,6 +195,10 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
       btn.setAttribute('aria-pressed',next==='dark'?'true':'false');
     });
   });
+})();
+(function(){
+  var h=document.querySelector('.site-header'),y=window.scrollY;
+  window.addEventListener('scroll',function(){var n=window.scrollY;h.classList.toggle('is-hidden',n>y&&n>h.offsetHeight);y=n;},{passive:true});
 })();
 </script>
 </body>

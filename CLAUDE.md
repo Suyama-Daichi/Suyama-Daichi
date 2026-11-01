@@ -10,7 +10,7 @@ d0nchan（どんちゃん）の個人ポートフォリオサイト。ビルド�
 - `404.html` / `favicon.ico` / `favicon-32.png` / `apple-touch-icon.png`
 - `.nojekyll` — Jekyll の処理を止めるための空ファイル。消さない
 
-CSS はすべて各 HTML のインライン style と `<head>` 内の `<style>` に書かれている。フォントは Google Fonts（Inter / Noto Sans JP / JetBrains Mono）。JavaScript はテーマ切り替えと、スマホで下スクロール時にヘッダーを隠すインラインスクリプトだけ。
+CSS はすべて各 HTML のインライン style と `<head>` 内の `<style>` に書かれている。フォントは Google Fonts（Inter / Noto Sans JP / JetBrains Mono）。JavaScript はテーマ切り替え用のインラインスクリプトだけ。
 
 ## 守ること
 

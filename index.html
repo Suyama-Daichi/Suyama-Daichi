@@ -39,7 +39,7 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 <div style="font-family: Inter, 'Noto Sans JP', sans-serif; color: var(--fg); background: var(--bg); min-height: 100vh">
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px)">
 
-<header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 0; border-bottom: 1px solid var(--line)">
+<header id="top" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 0; border-bottom: 1px solid var(--line)">
 <a href="#top" style="font-weight: 600; font-size: 17px; letter-spacing: -0.01em">d0nchan</a>
 <nav aria-label="メイン" class="site-nav" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 14px">
 <a href="#about" style="padding: 12px 0">About</a>
@@ -51,24 +51,16 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 <button type="button" class="theme-toggle" aria-label="ライト／ダークの切り替え" title="ライト／ダークの切り替え"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"></path></svg></button>
 </header>
 
-<section id="top" style="padding: clamp(80px, 12vw, 160px) 0 clamp(72px, 10vw, 128px); display: flex; flex-direction: column; gap: 40px">
-<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--muted); letter-spacing: 0.04em">Full-stack Engineer</p>
-<h1 style="margin: 0; font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: clamp(32px, 6.4vw, 88px); line-height: 1.18; letter-spacing: -0.02em">欲しいものは、<br>自分でつくる。</h1>
-<p style="margin: 0; max-width: 640px; font-family: 'Noto Sans JP', sans-serif; font-size: 17px; line-height: 1.9; color: var(--fg2)">d0nchan（どんちゃん）。自分が使いたいWebアプリやモバイルアプリを、企画から運用まで一人でつくっています。</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="#work" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; background: var(--fg); color: var(--bg); font-size: 15px; font-weight: 500">実績を見る</a>
-<a href="#contact" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid var(--fg); font-size: 15px; font-weight: 500">お問い合わせ</a>
-</div>
-</section>
+<h1 style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0">d0nchan（どんちゃん）のポートフォリオ</h1>
 
-<section id="about" style="padding: 96px 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 48px">
+<section id="about" style="padding: 96px 0; display: flex; flex-wrap: wrap; gap: 48px">
 <div style="flex: 1 1 240px">
 <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--muted)">01 — About</p>
 <h2 style="margin: 16px 0 0; font-size: 32px; font-weight: 600; letter-spacing: -0.01em">経歴・スキル</h2>
 </div>
 <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 64px">
 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px 32px">
-<img src="assets/avatar.webp" width="400" height="400" loading="lazy" alt="d0nchanのアイコン。展望台から街の景色を撮る後ろ姿" style="width: 120px; height: 120px; flex: 0 0 120px; border-radius: 50%; object-fit: cover; display: block; background: var(--sub); filter: grayscale(1)">
+<img src="assets/avatar.webp" width="400" height="400" alt="d0nchanのアイコン。展望台から街の景色を撮る後ろ姿" style="width: 120px; height: 120px; flex: 0 0 120px; border-radius: 50%; object-fit: cover; display: block; background: var(--sub); filter: grayscale(1)">
 <p style="flex: 1 1 320px; min-width: 0; margin: 0; font-family: 'Noto Sans JP', sans-serif; font-size: 17px; line-height: 2; color: var(--fg2)">フロントエンドからインフラ、データ基盤までを一人で通して設計・実装できるフルスタックエンジニアです。<br>株式会社HCプロデュースに一人目のエンジニアとして参画し、エンジニアリングマネージャーを経てCTOとなり、人的資本SaaSの開発と開発チームづくりを担っています。週末はFoursquare/Swarmのコミュニティ活動をしています。</p>
 </div>
 

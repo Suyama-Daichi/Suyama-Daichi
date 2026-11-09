@@ -89,7 +89,12 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 </div>
 
 <section style="padding: 96px 0 0; display: flex; flex-wrap: wrap; gap: 32px 48px">
-<h2 style="flex: 1 1 240px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--muted)">01 — 主な機能</h2>
+<h2 style="flex: 1 1 240px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--muted)">01 — 背景</h2>
+<p style="flex: 999 1 560px; min-width: 0; margin: 0; font-family: 'Noto Sans JP', sans-serif; font-size: 17px; line-height: 2; color: var(--fg2)"><a href="https://draft-draft.vercel.app/" style="border-bottom: 1px solid var(--fg)">https://draft-draft.vercel.app/</a> に影響され、友人とプロスピ2026でランダムにチームを組む遊びをしたいと思いました。ただ、収録選手に限定してランダムに選べるサービスが無かったので、自分で作りました。</p>
+</section>
+
+<section style="padding: 80px 0 0; display: flex; flex-wrap: wrap; gap: 32px 48px">
+<h2 style="flex: 1 1 240px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--muted)">02 — 主な機能</h2>
 <ul style="flex: 999 1 560px; min-width: 0; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line)">
 <li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px 0; border-bottom: 1px solid var(--line)">
 <span style="flex: 0 0 200px; font-family: 'Noto Sans JP', sans-serif; font-size: 17px; font-weight: 500">ルーレットで指名</span>
@@ -111,7 +116,7 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 </section>
 
 <section style="padding: 96px 0 0; display: flex; flex-wrap: wrap; gap: 32px 48px">
-<h2 style="flex: 1 1 240px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--muted)">02 — 技術構成</h2>
+<h2 style="flex: 1 1 240px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: var(--muted)">03 — 技術構成</h2>
 <p style="flex: 999 1 560px; min-width: 0; margin: 0; font-family: 'Noto Sans JP', sans-serif; font-size: 17px; line-height: 2; color: var(--fg2)">ページは HTML・CSS・Vanilla JavaScript で作り、Python のスクリプトで選手データ（CSV）を埋め込んで1つの HTML を生成しています。<br>ホスティングは Cloudflare Workers の静的アセット配信で、GitHub と連携して自動でデプロイされます。<br>収録選手は GitHub Actions が毎週確認し、ゲームのアップデートがあれば NPB の名簿データと Wikipedia をもとに更新案の PR を作ります。</p>
 </section>
 

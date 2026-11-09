@@ -5,7 +5,7 @@ d0nchan（どんちゃん）の個人ポートフォリオサイト。ビルド�
 ## 構成
 
 - `index.html` — トップ（About / Work / Homelab / Writing / Contact）
-- `metrandom.html` / `swarmlytics.html` / `kakitome.html` / `homelab.html` — 実績の詳細ページ
+- `metrandom.html` / `swarmlytics.html` / `kakitome.html` / `homelab.html` / `prospi-draft.html` — 実績の詳細ページ
 - `assets/` — 画像（アイコン・スクリーンショット・OGP 画像・About の写真 `avatar.webp`）
 - `404.html` / `favicon.ico` / `favicon-32.png` / `apple-touch-icon.png`
 - `.nojekyll` — Jekyll の処理を止めるための空ファイル。消さない
@@ -33,7 +33,7 @@ CSS はすべて各 HTML のインライン style と `<head>` 内の `<style>` 
 
 ## 残っている作業（TODO）
 
-1. ~~**OGP**~~（済）: OGP（`og:*` / `twitter:*`）と favicon は設定済み。`og:url` と `og:image` は公開 URL `https://suyama-daichi.github.io/Suyama-Daichi/` の絶対 URL。公開 URL を変えるときは、5ページすべてを置き換える。OGP 画像は `assets/ogp.png`（1200×630、モノクロ）、favicon は `favicon.ico` `favicon-32.png` `apple-touch-icon.png`（About のアイコン写真を白黒にしたもの）
+1. ~~**OGP**~~（済）: OGP（`og:*` / `twitter:*`）と favicon は設定済み。`og:url` と `og:image` は公開 URL `https://suyama-daichi.github.io/Suyama-Daichi/` の絶対 URL。公開 URL を変えるときは、6ページすべてを置き換える。OGP 画像は `assets/ogp.png`（1200×630、モノクロ）、favicon は `favicon.ico` `favicon-32.png` `apple-touch-icon.png`（About のアイコン写真を白黒にしたもの）
 2. **公開後の確認**: X の投稿画面などに URL を貼り、カードに `assets/ogp.png` が出ることを確かめる
 3. ~~**404.html**~~（済）: トップへ戻るリンクだけのシンプルな 404 ページを作る
 4. ~~**画像の最適化**~~（済）: `assets/` の PNG（swarmlytics-map / trip / search）は 200KB 超。WebP に変換して参照を差し替える。`<img>` に `width` / `height` と、ファーストビュー外の画像には `loading="lazy"` を付ける

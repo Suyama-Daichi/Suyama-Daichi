@@ -44,8 +44,8 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 <a href="#top" style="font-weight: 600; font-size: 17px; letter-spacing: -0.01em">d0nchan</a>
 <nav aria-label="メイン" class="site-nav" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 14px">
 <a href="#work" style="padding: 12px 0">Work</a>
-<a href="#about" style="padding: 12px 0">About</a>
 <a href="#homelab" style="padding: 12px 0">Homelab</a>
+<a href="#about" style="padding: 12px 0">About</a>
 <a href="#writing" style="padding: 12px 0">Writing</a>
 <a href="#contact" style="padding: 12px 0">Contact</a>
 </nav>
@@ -67,6 +67,13 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 </div>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 48px 32px">
+<a href="swarmlytics.html" class="work-card" style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="position: relative; aspect-ratio: 4 / 3; background: var(--sub); display: flex; align-items: center; justify-content: center; overflow: hidden">
+<img src="assets/swarmlytics-calendar.webp" width="460" height="997" loading="lazy" alt="Swarmlyticsのカレンダー画面" style="height: 88%; width: auto; display: block">
+<img src="assets/swarmlytics-icon.webp" width="400" height="400" loading="lazy" alt="Swarmlyticsのアイコン" style="position: absolute; left: 16px; bottom: 16px; width: 56px; height: 56px; display: block; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15))">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--muted)">Mobile App — iOS / Android</span><span style="font-size: 22px; font-weight: 600">Swarmlytics</span><span style="font-family: &quot;Noto Sans JP&quot;, sans-serif; font-size: 15px; line-height: 1.8; color: var(--fg2)">Swarmのチェックインの記録を深掘りできるアプリ。<br>普段のチェックインが貴重な資産になります。<br>5言語に対応。</span><span style="font-size: 14px; font-weight: 500; padding-top: 4px">詳しく見る →</span></div>
+</a>
 <a href="metrandom.html" class="work-card" style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
 <div style="position: relative; aspect-ratio: 4 / 3; background: var(--sub); overflow: hidden">
 <img src="assets/metrandom-thumb.webp" width="1200" height="900" loading="lazy" alt="metrandom.comの画面。千代田線の明治神宮前駅が選ばれた結果" style="width: 100%; height: 100%; object-fit: cover; display: block">
@@ -78,13 +85,6 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 <span style="font-family: 'Noto Sans JP', sans-serif; font-size: 15px; line-height: 1.8; color: var(--fg2)">東京・大阪・名古屋の地下鉄から、ボタンひとつでランダムに1駅を選ぶWebアプリ。</span>
 <span style="font-size: 14px; font-weight: 500; padding-top: 4px">詳しく見る →</span>
 </div>
-</a>
-<a href="swarmlytics.html" class="work-card" style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
-<div style="position: relative; aspect-ratio: 4 / 3; background: var(--sub); display: flex; align-items: center; justify-content: center; overflow: hidden">
-<img src="assets/swarmlytics-calendar.webp" width="460" height="997" loading="lazy" alt="Swarmlyticsのカレンダー画面" style="height: 88%; width: auto; display: block">
-<img src="assets/swarmlytics-icon.webp" width="400" height="400" loading="lazy" alt="Swarmlyticsのアイコン" style="position: absolute; left: 16px; bottom: 16px; width: 56px; height: 56px; display: block; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15))">
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--muted)">Mobile App — iOS / Android</span><span style="font-size: 22px; font-weight: 600">Swarmlytics</span><span style="font-family: &quot;Noto Sans JP&quot;, sans-serif; font-size: 15px; line-height: 1.8; color: var(--fg2)">Swarmのチェックインの記録を深掘りできるアプリ。<br>普段のチェックインが貴重な資産になります。<br>5言語に対応。</span><span style="font-size: 14px; font-weight: 500; padding-top: 4px">詳しく見る →</span></div>
 </a>
 <a href="kakitome.html" class="work-card" style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
 <div style="position: relative; aspect-ratio: 4 / 3; background: var(--sub); display: flex; align-items: center; justify-content: center; overflow: hidden">
@@ -112,9 +112,20 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 </div>
 </section>
 
+<section id="homelab" style="padding: 56px 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 48px">
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--muted)">02 — Homelab</p>
+<h2 style="margin: 0; font-size: 20px; font-weight: 600; white-space: nowrap">自宅サーバー運用</h2>
+</div>
+<a href="homelab.html" style="flex: 999 1 560px; min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding: 16px 0; border-bottom: 1px solid var(--line)">
+<span style="flex: 1 1 360px; font-family: 'Noto Sans JP', sans-serif; font-size: 15px; line-height: 1.8; color: var(--fg2)">ミニPCで immich、Raspberry Pi 4 で OpenMediaVault の NAS を動かしています。写真・動画は 3-2-1 ルールでバックアップしています。外出先からは Tailscale でつないでいます。</span>
+<span style="font-size: 14px; font-weight: 500; white-space: nowrap">詳しく見る →</span>
+</a>
+</section>
+
 <section id="about" style="padding: 96px 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 48px">
 <div style="flex: 1 1 240px">
-<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--muted)">02 — About</p>
+<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--muted)">03 — About</p>
 <h2 style="margin: 16px 0 0; font-size: 32px; font-weight: 600; letter-spacing: -0.01em">経歴・スキル</h2>
 </div>
 <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 64px">
@@ -215,17 +226,6 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 </div>
 </div>
 </div>
-</section>
-
-<section id="homelab" style="padding: 56px 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 48px">
-<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 8px">
-<p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--muted)">03 — Homelab</p>
-<h2 style="margin: 0; font-size: 20px; font-weight: 600; white-space: nowrap">自宅サーバー運用</h2>
-</div>
-<a href="homelab.html" style="flex: 999 1 560px; min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding: 16px 0; border-bottom: 1px solid var(--line)">
-<span style="flex: 1 1 360px; font-family: 'Noto Sans JP', sans-serif; font-size: 15px; line-height: 1.8; color: var(--fg2)">ミニPCで immich、Raspberry Pi 4 で OpenMediaVault の NAS を動かしています。写真・動画は 3-2-1 ルールでバックアップしています。外出先からは Tailscale でつないでいます。</span>
-<span style="font-size: 14px; font-weight: 500; white-space: nowrap">詳しく見る →</span>
-</a>
 </section>
 
 <section id="writing" style="padding: 96px 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 48px">

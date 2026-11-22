@@ -67,7 +67,7 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 </div>
 </div>
 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px 32px">
-<img src="assets/avatar.webp" width="400" height="400" alt="d0nchanのアイコン。展望台から街の景色を撮る後ろ姿" style="width: 120px; height: 120px; flex: 0 0 120px; border-radius: 50%; object-fit: cover; display: block; background: var(--sub); filter: grayscale(1)">
+<button type="button" id="meishi-open" aria-label="名刺を表示" title="名刺を表示" style="flex: 0 0 120px; width: 120px; height: 120px; padding: 0; border: none; background: none; cursor: pointer; border-radius: 50%"><img src="assets/avatar.webp" width="400" height="400" alt="d0nchanのアイコン。展望台から街の景色を撮る後ろ姿" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; background: var(--sub); filter: grayscale(1)"></button>
 <p style="flex: 1 1 320px; min-width: 0; margin: 0; font-family: 'Noto Sans JP', sans-serif; font-size: 17px; line-height: 2; color: var(--fg2)">フロントエンドからインフラ、データ基盤までを一人で通して設計・実装できるフルスタックエンジニアです。<br>株式会社HCプロデュースに一人目のエンジニアとして参画し、エンジニアリングマネージャーを経てCTOとなり、人的資本SaaSの開発と開発チームづくりを担っています。週末はFoursquare/Swarmのコミュニティ活動をしています。</p>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 48px 32px">
@@ -293,6 +293,23 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
       btn.setAttribute('aria-pressed',next==='dark'?'true':'false');
     });
   });
+})();
+</script>
+
+<div id="meishi-modal" style="display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0, 0, 0, 0.65); padding: 24px; overflow-y: auto">
+<div style="max-width: 560px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
+<img src="assets/meishi-front.webp" width="1146" height="721" loading="lazy" alt="名刺（表面）" style="width: 100%; height: auto; display: block; transform: rotate(180deg)">
+<img src="assets/meishi-back.webp" width="1146" height="721" loading="lazy" alt="名刺（裏面）" style="width: 100%; height: auto; display: block; transform: rotate(180deg)">
+</div>
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('meishi-modal');
+  var open = document.getElementById('meishi-open');
+  if (!modal || !open) return;
+  open.addEventListener('click', function(){ modal.style.display = 'block'; });
+  modal.addEventListener('click', function(){ modal.style.display = 'none'; });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') modal.style.display = 'none'; });
 })();
 </script>
 </body>

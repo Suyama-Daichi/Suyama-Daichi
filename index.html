@@ -297,14 +297,27 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 </script>
 
 <div id="meishi-modal" style="display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0, 0, 0, 0.65)">
-<img src="assets/meishi-front.webp" width="1146" height="721" loading="lazy" alt="名刺（表面）" style="width: 100vw; height: 100vh; object-fit: contain; display: block; transform: rotate(180deg)">
+<img id="meishi-img" src="assets/meishi-front.webp" width="1146" height="721" loading="lazy" alt="名刺（表面）" style="position: absolute; top: 50%; left: 50%; width: 100vw; height: 100vh; object-fit: contain; display: block; transform: translate(-50%, -50%)">
 </div>
 <script>
 (function(){
   var modal = document.getElementById('meishi-modal');
   var open = document.getElementById('meishi-open');
-  if (!modal || !open) return;
-  open.addEventListener('click', function(){ modal.style.display = 'block'; });
+  var img = document.getElementById('meishi-img');
+  if (!modal || !open || !img) return;
+  function layout(){
+    if (window.innerHeight > window.innerWidth) {
+      img.style.width = '100vh';
+      img.style.height = '100vw';
+      img.style.transform = 'translate(-50%, -50%) rotate(90deg)';
+    } else {
+      img.style.width = '100vw';
+      img.style.height = '100vh';
+      img.style.transform = 'translate(-50%, -50%)';
+    }
+  }
+  open.addEventListener('click', function(){ layout(); modal.style.display = 'block'; });
+  window.addEventListener('resize', function(){ if (modal.style.display !== 'none') layout(); });
   modal.addEventListener('click', function(){ modal.style.display = 'none'; });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') modal.style.display = 'none'; });
 })();

@@ -296,11 +296,8 @@ a{color:var(--fg);text-decoration:none}a:hover{color:var(--hover)}
 })();
 </script>
 
-<div id="meishi-modal" style="display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0, 0, 0, 0.65); padding: 24px; overflow-y: auto">
-<div style="max-width: 560px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
-<img src="assets/meishi-front.webp" width="1146" height="721" loading="lazy" alt="名刺（表面）" style="width: 100%; height: auto; display: block; transform: rotate(180deg)">
-<img src="assets/meishi-back.webp" width="1146" height="721" loading="lazy" alt="名刺（裏面）" style="width: 100%; height: auto; display: block; transform: rotate(180deg)">
-</div>
+<div id="meishi-modal" style="display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0, 0, 0, 0.65)">
+<img src="assets/meishi-front.webp" width="1146" height="721" loading="lazy" alt="名刺（表面）" style="width: 100vw; height: 100vh; object-fit: contain; display: block; transform: rotate(180deg)">
 </div>
 <script>
 (function(){
